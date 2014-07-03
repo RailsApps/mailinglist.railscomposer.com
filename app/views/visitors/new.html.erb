@@ -1,17 +1,30 @@
-<% content_for :title do Rails.application.secrets.domain_name end %>
-<% content_for :description do %>Sign up for our mailing list<% end %>
-<section>
-  <div class="column">
-    <h2>Stay in touch.</h2>
-  </div>
-  <div class="column">
-    <div class="form-centered">
-      <%= simple_form_for @visitor do |f| %>
-        <%= f.error_notification %>
-        <%= f.input :email, label: false, :placeholder => 'Your email address...' %>
-        <br/>
-        <%= f.button :submit, "Sign up for the mailing list", :class => "submit" %>
-      <% end %>
+<% content_for :title do 'Rails Composer Mailing List' end %>
+<% content_for :description do %>Sign up for the Rails Composer mailing list for news about the project<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 ">
+      <div class="box">
+        <div class="icon">
+          <div class="image"><i class="fa fa-envelope"></i></div>
+          <div class="info text-center">
+            <h3 class="title">News and Announcements</h3>
+              <p>
+                Do you like Rails Composer? Join the mailing list and
+                get announcements about updates and new features. It's the
+                best way to stay informed about Rails Composer.
+            </p>
+            <br/>
+            <br/>
+            <%= simple_form_for @visitor do |f| %>
+              <%= f.error_notification %>
+              <%= f.input :email, label: false, :placeholder => 'Your email address...', :input_html => {:style=> 'width: 250px'} %>
+              <br/>
+              <%= f.button :submit, "Sign up for the mailing list", :class => "submit" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="space"></div>
+      </div>
     </div>
   </div>
-</section>
+</div>
