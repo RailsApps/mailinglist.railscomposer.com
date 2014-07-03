@@ -2,14 +2,11 @@ h1. !http://railsapps.github.io/images/rails-36x36.jpg(RailsApps)! mailinglist.r
 
 Visitors use this application to sign up for a mailing list for the Rails Composer product.
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
-
-h2. Credits
+h4. Credits
 
 Daniel Kehoe created this application.
 
-h2. License
+h4. License
 
 "MIT License":http://www.opensource.org/licenses/mit-license
 
