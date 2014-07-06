@@ -6,8 +6,8 @@ class VisitorsController < ApplicationController
 
   def create
     @visitor = Visitor.new(secure_params)
-    if @visitor.save
-      MailingListSignupJob.enqueue @visitor
+    if @visitor.valid?
+      MailingListSignupJob.enqueue @visitor.email
       flash[:notice] = "Signed up #{@visitor.email} for the mailing list."
       redirect_to root_path
     else

@@ -4,8 +4,8 @@ class ApiController < ApplicationController
 
   def create
     @visitor = Visitor.new(secure_params)
-    if @visitor.save
-      MailingListSignupJob.enqueue @visitor
+    if @visitor.valid?
+      MailingListSignupJob.enqueue @visitor.email
       head :created
     else
       head :internal_server_error
