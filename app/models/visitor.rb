@@ -7,11 +7,11 @@ class Visitor < ActiveRecord::Base
     result = mailchimp.lists.subscribe({
       :id => Rails.application.secrets.mailchimp_list_id,
       :email => {:email => self.email},
-      :double_optin => false,
+      :double_optin => true,
       :update_existing => true,
       :send_welcome => true
     })
-    Rails.logger.info("Subscribed #{self.email} to MailChimp") if result
+    Rails.logger.info("\nSubscribed #{self.email} to MailChimp") if result
   end
 
 end
