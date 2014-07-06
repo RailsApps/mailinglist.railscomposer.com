@@ -2,6 +2,42 @@ h1. !http://railsapps.github.io/images/rails-36x36.jpg(RailsApps)! mailinglist.r
 
 Visitors use this application to sign up for a mailing list for the Rails Composer product.
 
+h4. Site
+
+The application is running on Heroku at "mailinglist.railscomposer.com":http://mailinglist.railscomposer.com/.
+
+Visitors can submit a form to add their email address to the Rails Composer mailing list.
+
+h4. API
+
+The application responds to API requests:
+
+<pre>
+$ curl http://mailinglist.railscomposer.com/api -d'visitor[email]=user@example.com'
+</pre>
+
+h4. Mailing List
+
+The Rails Composer mailing list is hosted on "MailChimp":http://mailchimp.com/. The mailing list is used for occasional announcements from the RailsApps project.
+
+The application connects via MailChimp's API using the "Gibbon":https://github.com/amro/gibbon gem.
+
+h4. Queueing with Active Job
+
+The application uses the "Active Job":https://github.com/rails/activejob gem and the "SuckerPunch":https://github.com/brandonhilkert/sucker_punch gem for job queueing so the user experiences no delays when submitting the form or using the API.
+
+h4. Rails Composer
+
+Rails Composer is a tool that generates Rails starter applications. When developers use Rails Composer, they are invited to join the mailing list:
+
+<pre>
+  Get on the mailing list for Rails Composer news?
+  Enter your email address:
+</pre>
+
+Rails Composer connects to the mailinglist.railscomposer.com application via the API. Email addresses are added to the mailing list and are not used for anything else.
+
+
 h4. Credits
 
 Daniel Kehoe created this application.
