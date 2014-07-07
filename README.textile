@@ -45,7 +45,7 @@ Email addresses are added to the MailChimp mailing list and are not used for any
 
 h4. Blog Post
 
-See the blog post announcing the [Mailing List for Rails Composer](http://blog.railsapps.org/post/90997633675/mailing-list-for-rails-composer).
+See the blog post announcing the "Mailing List for Rails Composer":http://blog.railsapps.org/post/90997633675/mailing-list-for-rails-composer.
 
 h4. Credits
 
